@@ -1,15 +1,12 @@
 function Image(img)
-      local stringify = pandoc.utils.stringify
-      if img.classes:find('contribution',1) then
-        local fn = img.src
-        --print(fn)
-        local f = io.open("contribution/" .. fn, 'r')
-        local doc = pandoc.read(f:read('*a'))
-        f:close()
-        local figid = string.sub(fn,1,string.len(fn)-3)
-        local src = stringify(doc.meta.image_url) or "src has not been set"
-        src = "." .. src
-        local contribution = stringify(doc.meta.contribution) 
-        return pandoc.Image(contribution,src,nil,"fig:" .. figid)
-      end
+    if img.classes:find('contribution',1) then
+      local f = io.open("contribution/" .. img.src, 'r')
+      local doc = pandoc.read(f:read('*a'))
+      f:close()
+      local caption = pandoc.utils.stringify(doc.meta.caption) 
+      local name = pandoc.utils.stringify(doc.meta.name)
+      local am = pandoc.utils.stringify(doc.meta.id)
+      local content = "> <b> " .. caption .. "</b> \n>" .. "Ονοματεπωνυμο Φοιτητη:" .. name .. "\nAριθμος Mητρωου:" .. am
+      return pandoc.RawInline('markdown',content)
+    end
 end
