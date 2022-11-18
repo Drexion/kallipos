@@ -7,7 +7,7 @@ function Image(img)
       local contribution = pandoc.utils.stringify(doc.meta.contribution) 
       local student = pandoc.utils.stringify(doc.meta.student)
       local studentid = pandoc.utils.stringify(doc.meta.studentid)
-      local content = "<b>" .. title .. "</b>" .. "\n".. "<i>" .. contribution .. "</i>" .. "\n" .. "Ονοματεπωνυμο Φοιτητη:" .. student .. "\n".."Aριθμος Mητρωου:" .. studentid
+      local content = "<b>" .. title .. "</b> \n" .. "<i>" .. contribution .. "</i> \n" .. "Ονοματεπωνυμο Φοιτητη:" .. student .."\nAριθμος Mητρωου:" .. studentid
       return pandoc.RawInline('markdown',content)
     end
 end
