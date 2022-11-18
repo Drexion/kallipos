@@ -1,14 +1,9 @@
 ---
 author: Drexion
+student: "Άγγελος Βαρότσης"
+studentid: "P2018118"
 title: Γλώσσα Προγραμματισμού B
-year: 1969
-image_url: /b-language.png
 contribution: "Η γλώσσα προγραμματισμού C είναι βασισμένη στην γλώσσα προγραμματισμού B η οποία δημιουργήθηκε από τους Ken Thompson και Dennis Ritchie, εμφανίστηκε για πρώτη φορά το 1969 και αποτελέι την κύρια επιρροή για την δημιουργία. Η Β είναι βασισμένη κυρίως στην γλώσσα BCPL και έχει την μορφή typeless το οποίο σημαίνει ότι αντιμετωπίζει όλα τα δεδομένα ως words (μονάδα δεδομένων επεξεργαστών). Δημιουργήθηκε για αναδρομικά, μη αριθμητικά, ανεξάρτητα μηχανών εφαρμογές, όπως συστήματα και προγράμματα. Το μεγαλύτερο μειονέκτημα της συγκεκριμένης γλώσσας, παρατηρήθηκε κάτα την κανονικοποίηση των μηχανών με ASCII processing, το οποίο έκανε την μορφή typeless να φαίνεται ως ένα σοβαρό μεινέκτημα. Αυτό παρότρυνε τους ιδρυτές της, να επεκτείτουν την γλώσσας προσθέτοντας καινούρια είδη δεδομένων ορισμένα από τον χρήστη. Έτσι λοιπόν δημιουργήθηκε η γλώσσας προγραμματιμσού C."
-license_url: "http://clipart-library.com/clipart/6ip5X64BT.htm  https://en.wikipedia.org/wiki/B_(programming_language)" 
-license_text: clipart-library Wikimedia
-categories:
-  - programming language
-tags:
-  - B
-  - C
+license_url: "https://en.wikipedia.org/wiki/B_(programming_language)" 
+license_text: Wikimedia
 ---
