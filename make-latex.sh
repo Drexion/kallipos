@@ -17,8 +17,7 @@ for filename in text/apx*.txt; do
 done
 
 pandoc -s latex/*.tex -o tex/book.tex 
+
 pandoc -N --quiet --variable "geometry=margin=1.2in" --variable mainfont="TeX Gyre Pagella" --variable sansfont="TeX Gyre Pagella" --variable monofont="TeX Gyre Pagella" --variable fontsize=12pt --variable version=2.0 tex/book.tex  --pdf-engine=xelatex --toc -o book.pdf
-
-
 
 #sed -i '' 's+Figure+Εικόνα+g' ./latex/ch0*
