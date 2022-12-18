@@ -3,11 +3,12 @@ function Image(img)
       local f = io.open("contribution/" .. img.src, 'r')
       local doc = pandoc.read(f:read('*a'))
       f:close()
-      local title = pandoc.utils.stringify(doc.meta.title)
-      local contribution = pandoc.utils.stringify(doc.meta.contribution) 
-      local student = pandoc.utils.stringify(doc.meta.student)
-      local studentid = pandoc.utils.stringify(doc.meta.studentid)
-      local content = "<b>" .. title .. "</b> \n" .. "<i>" .. contribution .. "</i> \n" .. "Ονοματεπωνυμο Φοιτητη:" .. student .."\nAριθμος Mητρωου:" .. studentid
+      local title = pandoc.utils.stringify(doc.meta.title) or "Title Not Set"
+      local contribution = pandoc.utils.stringify(doc.meta.contribution) or "Contribution Not Set"
+      local student = pandoc.utils.stringify(doc.meta.student) or "Student Name Not Set"
+      local studentid = pandoc.utils.stringify(doc.meta.studentid) or "Student ID Not Set"
+      local content = "**" .. title .. "  \n**" .. "*" .. contribution .. "*  \n" .. "**Ονοματεπωνυμο Φοιτητη: **" .. student .."  \n**Aριθμος Mητρωου: **" .. studentid
       return pandoc.RawInline('markdown',content)
     end
 end
+
